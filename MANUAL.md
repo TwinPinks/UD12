@@ -30,7 +30,7 @@ Bypassing the module passes the input to both outputs.
 | **CUTOFF** | 5.1 Hz – 20.9 kHz | Non-linear taper, as on the hardware: center ≈ 650 Hz |
 | **RES** | 0 – 100 % | Above ≈ 92 % the filter enters self-oscillation |
 | **CV1** | ×−3 – ×3 | Attenuverter for the CV1 input |
-| **INPUT** | −6 – +6 dB | Center is unity; extremes are exactly ×0.5 and ×2 |
+| **GAIN** | −6 – +6 dB | Center is unity; extremes are exactly ×0.5 and ×2 |
 | **OUTPUT** | 0 – 100 % | Default 83 % |
 
 RES at 0 % does not remove the resonance completely. As in the original
@@ -48,7 +48,7 @@ The input expects eurorack-level signals, around **±4 to ±5 V**, as produced b
 a typical VCO. This matters more than it may seem: the circuit's nonlinearities
 respond to level. A weak signal will not bring out the character, and an
 excessively hot one will drive the filter into limiting before you hear the
-resonance. If your source is louder, trim it with the **INPUT** control.
+resonance. If your source is louder, trim it with the **GAIN** control.
 
 ## Menu (right-click)
 
