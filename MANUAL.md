@@ -91,6 +91,10 @@ One voice at the defaults (384 kHz core, 48 kHz host) costs about 2.5 % of one
 core on an Apple M-series CPU. The 768 kHz core costs roughly twice as much,
 192 kHz roughly half.
 
+The cost is set by the Core rate, not by the host. The core runs at its own
+rate regardless of the project's sample rate, so raising the project rate does
+not increase UD12's CPU.
+
 ## Patches
 
 The module stores the core rate and the CV limit mode in the patch. Patches
