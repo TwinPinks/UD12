@@ -28,7 +28,7 @@ Bypassing the module passes the input to both outputs.
 | Control | Range | Notes |
 |---|---|---|
 | **CUTOFF** | 5.1 Hz – 20.9 kHz | Non-linear taper, as on the hardware: center ≈ 650 Hz |
-| **RES** | 0 – 100 % | Above ≈ 92 % the filter enters self-oscillation |
+| **RES** | 0 – 100 % | Above ≈ 95 % the filter enters self-oscillation |
 | **CV1** | ×−3 – ×3 | Attenuverter for the CV1 input |
 | **GAIN** | −6 – +6 dB | Center is unity; extremes are exactly ×0.5 and ×2 |
 | **OUTPUT** | 0 – 100 % | Default 83 % |
