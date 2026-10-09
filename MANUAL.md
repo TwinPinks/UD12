@@ -74,11 +74,10 @@ On 44.1 kHz host families the labels are computed from the family and read
 
 ## What to expect
 
-* **Resonance up to ~92 %** — normal filter operation.
-* **Above that** — the filter begins to sound on its own. This is the hardware's
-  behaviour, not a fault: the Polivoks' self-oscillation was measured from the
-  instrument and reproduced along with its threshold and the character of its
-  onset.
+* **Resonance** peaks the filter more and more sharply as it is raised. Around
+  **95 %** the peak takes over and the filter sings on its own — the Polivoks'
+  self-oscillation, measured from the instrument and reproduced with its
+  threshold and the character of its onset.
 * **In the bass** at high resonance the loop is limited harder than a simple
   drop in level — a dedicated law, derived from the decay of the free
   oscillation on the hardware. It engages only when a signal is present at the
