@@ -10,10 +10,16 @@ resonance and self-oscillation respond the way the circuit does.
 | Port | Function |
 |---|---|
 | **IN** | Audio input |
-| **CV1** | Cutoff CV, 1 V/oct scaled by the CV1 attenuverter (−3 to +3; default 0) |
-| **CV2** | Cutoff CV, 1 V/oct, fixed |
+| **CV1** | Cutoff CV through the CV1 attenuverter |
+| **CV2** | Cutoff CV, 1 V/oct |
 | **BP** | Band-pass output |
 | **LP** | Low-pass output |
+
+The two cutoff CV inputs are summed. CV2 tracks 1 V/oct, and in self-oscillation
+the filter plays in tune across the low and middle registers. CV1 runs through a
+bipolar attenuverter: at ×1 it tracks 1 V/oct like CV2, and at ×3 a 5 V source
+such as an envelope sweeps the full cutoff range. The attenuverter starts at 0,
+so CV1 has no effect until you turn it up.
 
 Bypassing the module passes the input to both outputs.
 
@@ -23,12 +29,12 @@ Bypassing the module passes the input to both outputs.
 |---|---|---|
 | **CUTOFF** | 5.1 Hz – 20.9 kHz | Non-linear taper, as on the hardware: center ≈ 650 Hz |
 | **RES** | 0 – 100 % | Above ≈ 92 % the filter enters self-oscillation |
-| **CV1** | −3 – +3 | Attenuverter for the CV1 input |
+| **CV1** | ×−3 – ×3 | Attenuverter for the CV1 input |
 | **INPUT** | −6 – +6 dB | Center is unity; extremes are exactly ×0.5 and ×2 |
 | **OUTPUT** | 0 – 100 % | Default 83 % |
 
-CV is summed into the cutoff at 1 V/oct. Cutoff will not travel above 26.5 kHz —
-this ceiling is set by the circuit (the saturation current of the first stage).
+Cutoff will not travel above 26.5 kHz — this ceiling is set by the circuit (the
+saturation current of the first stage).
 
 ## Levels
 
