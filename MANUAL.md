@@ -33,8 +33,10 @@ Bypassing the module passes the input to both outputs.
 | **INPUT** | −6 – +6 dB | Center is unity; extremes are exactly ×0.5 and ×2 |
 | **OUTPUT** | 0 – 100 % | Default 83 % |
 
-Cutoff will not travel above 26.5 kHz — this ceiling is set by the circuit (the
-saturation current of the first stage).
+CV takes the cutoff beyond the range of the knob. Upward it reaches 26.5 kHz, a
+ceiling set by the circuit itself (the saturation current of the first stage).
+Downward there is no limit: CV can sweep the filter well into the sub-audio
+range.
 
 ## Levels
 
