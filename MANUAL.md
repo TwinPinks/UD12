@@ -1,18 +1,17 @@
 # UD12
 
 **TWIN PINKS UD12** is a nonlinear two-pole state-variable filter based on
-the Polivoks circuit and its K140UD12 operational amplifiers. It is built from
-the circuit itself — the amplifier nonlinearity, the sag and bump of the transfer
-characteristic, and the behaviour of the loop at its limit are all computed in
-real time, not reproduced from a table of presets.
+the Polivoks circuit and its K140UD12 operational amplifiers. The op-amp
+nonlinearity and the feedback loop are computed in real time, so drive,
+resonance and self-oscillation respond the way the circuit does.
 
 ## Ports
 
 | Port | Function |
 |---|---|
 | **IN** | Audio input |
-| **CV1** | Cutoff modulation via the CV1 attenuverter |
-| **CV2** | Cutoff modulation, 1 V/oct, no attenuverter |
+| **CV1** | Cutoff CV, 1 V/oct scaled by the CV1 attenuverter (−3 to +3; default 0) |
+| **CV2** | Cutoff CV, 1 V/oct, fixed |
 | **BP** | Band-pass output |
 | **LP** | Low-pass output |
 
