@@ -18,8 +18,8 @@ of an original hardware filter.
 
 The two cutoff CV inputs are summed. CV2 tracks 1 V/oct, and in self-oscillation
 the filter plays in tune across the low and middle registers. CV1 runs through a
-bipolar attenuverter; at ×3 a 5 V source such as an envelope sweeps the full
-cutoff range. The attenuverter starts at 0,
+bipolar attenuverter; at ×3 a 5 V source such as an envelope can sweep the full
+cutoff range, depending on where CUTOFF is set. The attenuverter starts at 0,
 so CV1 has no effect until you turn it up.
 
 Bypassing the module passes the input to both outputs.
