@@ -1,7 +1,8 @@
 # UD12
 
 **TWIN PINKS UD12** is a nonlinear two-pole state-variable filter based on
-the Polivoks circuit.
+the Polivoks circuit. UD12 takes its name from the K140UD12, the Soviet
+operational amplifier used in the Polivoks filter.
 
 The model was developed through transistor-level simulations and measurements
 of an original hardware filter.
@@ -46,7 +47,7 @@ range.
 The input expects eurorack-level signals, around **±4 to ±5 V**, as produced by
 a typical VCO. This matters more than it may seem: the filter's character depends
 on input level. A weak signal will not bring out the character, and an
-excessively hot one will drive the filter into limiting before you hear the
+excessively hot one will drive the filter into saturation before you hear the
 resonance. If your source is louder, trim it with the **GAIN** control.
 
 ## Menu (right-click)
@@ -58,8 +59,8 @@ resonance. If your source is louder, trim it with the **GAIN** control.
   the same number of octaves. A sound-design option, not a property of the
   hardware.
 
-**Core rate** — sets the internal processing rate; a higher rate means more
-accuracy at the top of the range and more CPU:
+**Core rate** — UD12 uses oversampling; Core rate sets the internal processing
+rate. A higher rate means more accuracy at the top of the range and more CPU:
 
 | Mode | Rate | Use |
 |---|---|---|
