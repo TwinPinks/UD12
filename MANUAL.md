@@ -4,8 +4,8 @@
 the Polivoks circuit. UD12 takes its name from the K140UD12, the Soviet
 operational amplifier used in the Polivoks filter.
 
-The model was developed through transistor-level simulations and measurements
-of an original hardware filter.
+The model comes from transistor-level simulation of that circuit and from
+measurements of a hardware Polivoks filter.
 
 ## Ports
 
@@ -44,17 +44,16 @@ range.
 
 ## Levels
 
-The input expects eurorack-level signals, around **±4 to ±5 V**, as produced by
-a typical VCO. This matters more than it may seem: the filter's character depends
-on input level. A weak signal will not bring out the character, and an
-excessively hot one will drive the filter into saturation before you hear the
-resonance. If your source is louder, trim it with the **GAIN** control.
+The input expects eurorack levels, around **±4 to ±5 V**, as produced by a
+typical VCO. Input level changes how the resonance responds and how the filter
+sounds. A quiet signal keeps it in its linear range; a very hot one saturates it
+before the resonance comes through. Trim a loud source with **GAIN**.
 
 ## Menu (right-click)
 
 **CV limit** — what happens when CV pushes the cutoff past the ceiling:
 
-* **Soft** (default) — the cutoff eases smoothly into the ceiling.
+* **Soft** (default) — the cutoff slows as it nears the ceiling and stops there.
 * **Fold (experimental)** — above the ceiling the cutoff reflects back down by
   the same number of octaves. A sound-design option, not a property of the
   hardware.
@@ -62,27 +61,21 @@ resonance. If your source is louder, trim it with the **GAIN** control.
 **Core rate** — UD12 uses oversampling; Core rate sets the internal processing
 rate. A higher rate means more accuracy at the top of the range and more CPU:
 
-| Mode | Rate | Use |
-|---|---|---|
-| High | 768 kHz | Maximum accuracy |
-| **Normal** (default) | 384 kHz | The working choice: half the cost, no audible difference |
-| Eco | 192 kHz | Economy mode |
+| Mode | Rate | CPU | Use |
+|---|---|---|---|
+| Extreme | 768 kHz | ×4 | Maximum accuracy |
+| High | 384 kHz | ×2 | Steadier pitch and level under cutoff FM at high resonance |
+| **Normal** (default) | 192 kHz | — | The working choice |
 
-On 44.1 kHz host families the labels are computed from the family and read
-705.6 / 352.8 / 176.4 kHz — the rates actually running in your build.
-
-## CPU
-
-On a MacBook Air M2 running VCV Rack 2 Pro, one instance in Normal mode
-measured approximately 2.7 % of one CPU core at a 48 kHz project rate with
-default controls and no CV modulation. In the same test, CPU usage decreased to
-approximately 2.0 % at 96 kHz and 1.6 % at 192 kHz. Results depend on the
-computer, patch and processing mode.
+At 44.1 kHz project rates the menu reads 705.6 / 352.8 / 176.4 kHz instead,
+and the default is 176.4 kHz.
 
 ## Patches
 
 The module saves the Core rate and CV limit settings with your patch.
 
 ---
+
+Audio examples and details: [twinpinksmusic.com/ud12-vcv](https://twinpinksmusic.com/ud12-vcv)
 
 © TWIN PINKS. Filter model and code by Stepan Chernov.
